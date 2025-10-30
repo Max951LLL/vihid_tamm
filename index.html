@@ -194,12 +194,12 @@
 
 
     <!-- Контакти -->
-    <section id="contacts" style="display:none" class="mt" aria-label="Контакти" action="https://formspree.io/f/xpwolopo" method="POST">
+    <section id="contacts" style="display:none" class="mt" aria-label="Контакти">
         <div class="card">
             <h2>Контакти</h2>
             <p class="small">Зв'язок з командою, питання для медіа чи замовлення — заповніть форму.</p>
 
-            <form id="contactForm" class="mt" onsubmit="return false;">
+            <form id="contactForm" class="mt" onsubmit="return false;" action="https://formspree.io/f/xpwolopo" method="POST">
                 <div class="row">
                     <input type="text" id="name" name="name" placeholder="Ім'я" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
@@ -442,5 +442,6 @@
 </script>
 </body>
 </html>
+
 
 
