@@ -417,15 +417,19 @@
 
 
 
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
         const message = document.getElementById('message').value.trim();
-
-        if (!name || !email || !message) {
-            e.preventDefault();
+        if(!name||!email||!message) {
             alert('Заповніть, будь ласка, основні поля.');
+            return;
         }
+        alert(`Дякуємо, ${name}! Повідомлення прийнято.`);
+        contactForm.reset();
     });
 
 
@@ -438,6 +442,7 @@
 </script>
 </body>
 </html>
+
 
 
 
